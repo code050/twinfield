@@ -1,5 +1,5 @@
 {
-  "name": "code050/twinfield-fix-performancetype-mapping",
+  "name": "code050/twinfield",
   "type": "library",
   "description": "Library for using the Twinfield Soap Service.",
   "keywords": [
