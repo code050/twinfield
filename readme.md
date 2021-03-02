@@ -12,14 +12,14 @@ Use the Twinfield SOAP Service to have your PHP application communicate directly
 Install this Twinfield PHP library with Composer:
 
 ```bash
-composer require 'php-twinfield/twinfield:^2.0'
+composer require code050/twinfield
 ```
 
 
 ## Usage
 
 ### Authentication
-You need to set up a `\PhpTwinfield\Secure\AuthenticatedConnection` class with your credentials. When using basic 
+You need to set up a `\PhpTwinfield\Secure\AuthenticatedConnection` class with your credentials. When using basic
 username and password authentication, the `\PhpTwinfield\Secure\WebservicesAuthentication` class should be used, as follows:
 
 ```php
@@ -94,7 +94,7 @@ $customer->addAddress($customer_address);
 $customer_factory->send($customer);
 ```
 
-You can also send multiple objects in one batch, chunking is handled automatically. 
+You can also send multiple objects in one batch, chunking is handled automatically.
 
 ### Supported resources
 Not all resources from the Twinfield API are currently implemented. Feel free to create a pull request when you need
@@ -113,7 +113,7 @@ support for another resource.
 | Transactions:<br> [Purchase](https://c3.twinfield.com/webservices/documentation/#/ApiReference/PurchaseTransactions), [Sale](https://c3.twinfield.com/webservices/documentation/#/ApiReference/SalesTransactions), [Journal](https://c3.twinfield.com/webservices/documentation/#/ApiReference/Transactions/JournalTransactions) | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |
 | [Users](https://c3.twinfield.com/webservices/documentation/#/ApiReference/Masters/Users)                        |                    | :white_check_mark: |                    |                    |
 | [Vat types](https://c3.twinfield.com/webservices/documentation/#/ApiReference/Masters/VAT)                      |                    | :white_check_mark: |                    |                    |
- 
+
 
 ## Links
 
