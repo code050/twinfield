@@ -144,10 +144,12 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setMatchLevel(?int $matchLevel): BaseTransactionLine
     {
+      //do not throw error:  Twinfield returns VAT with matchstatus on Outside EU SalesTransactions
+      /*
         if ($matchLevel !== null && !$this->getLineType()->equals(LineType::TOTAL())) {
             throw Exception::invalidFieldForLineType('matchLevel', $this);
         }
-
+        */
         return parent::setMatchLevel($matchLevel);
     }
 
