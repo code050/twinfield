@@ -162,10 +162,11 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setBaseValueOpen(?Money $baseValueOpen): BaseTransactionLine
     {
+      /*
         if ($baseValueOpen !== null && !$this->getLineType()->equals(LineType::TOTAL())) {
             throw Exception::invalidFieldForLineType('baseValueOpen', $this);
         }
-
+        */
         return parent::setBaseValueOpen($baseValueOpen);
     }
 
@@ -178,10 +179,11 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setProjectAsset(string $dim3)
     {
+        /*
         if (!$this->getLineType()->equals(LineType::DETAIL())) {
             throw Exception::invalidDimensionForLineType(3, $this);
         }
-
+*/
         return $this->setDim3($dim3);
     }
 
@@ -194,9 +196,11 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setVatTurnover(?Money $vatTurnover)
     {
+      /*
         if (!$this->getLineType()->equals(LineType::VAT())) {
             throw Exception::invalidFieldForLineType("vatturnover", $this);
         }
+        */
         return parent::setVatTurnOver($vatTurnover);
     }
 
@@ -209,9 +213,11 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setVatBaseTurnover(?Money $vatBaseTurnover)
     {
+      /*
         if (!$this->getLineType()->equals(LineType::VAT())) {
             throw Exception::invalidFieldForLineType("vatbaseturnover", $this);
         }
+        */
         return parent::setVatBaseTurnover($vatBaseTurnover);
     }
 
@@ -224,9 +230,11 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setVatRepTurnover(?Money $vatRepTurnover)
     {
+      /*
         if (!$this->getLineType()->equals(LineType::VAT())) {
             throw Exception::invalidFieldForLineType("vatrepturnover", $this);
         }
+        */
         return parent::setVatRepTurnover($vatRepTurnover);
     }
 
@@ -239,9 +247,11 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setBaseline(?int $baseline)
     {
+      /*
         if (!$this->getLineType()->equals(LineType::VAT())) {
             throw Exception::invalidFieldForLineType("baseline", $this);
         }
+        */
         return parent::setBaseline($baseline);
     }
 
