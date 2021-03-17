@@ -120,13 +120,17 @@ class SalesTransactionLine extends BaseTransactionLine
      */
     public function setMatchStatus(?string $matchStatus): BaseTransactionLine
     {
-        if (
-            $matchStatus !== null &&
-            in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()]) &&
-            $matchStatus != self::MATCHSTATUS_NOTMATCHABLE
-        ) {
-            throw Exception::invalidMatchStatusForLineType($matchStatus, $this);
-        }
+      //do not throw error:  Twinfield returns VAT with matchstatus on Outside EU SalesTransactions
+      /*
+      if (
+          $matchStatus !== null &&
+          in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()]) &&
+          $matchStatus != self::MATCHSTATUS_NOTMATCHABLE
+      ) {
+
+           throw Exception::invalidMatchStatusForLineType($matchStatus, $this);
+      }
+      */
 
         return parent::setMatchStatus($matchStatus);
     }
