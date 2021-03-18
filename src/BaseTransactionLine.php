@@ -312,9 +312,9 @@ abstract class BaseTransactionLine implements TransactionLine
      */
     public function setVatCode(?string $vatCode): BaseTransactionLine
     {
-        if ($vatCode !== null && !in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()])) {
-            throw Exception::invalidFieldForLineType('vatCode', $this);
-        }
+          //if ($vatCode !== null && !in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()])) {
+          //    throw Exception::invalidFieldForLineType('vatCode', $this);
+          //}
 
         $this->vatCode = $vatCode;
 
@@ -336,9 +336,9 @@ abstract class BaseTransactionLine implements TransactionLine
      */
     public function setVatValue(?Money $vatValue): BaseTransactionLine
     {
-        if ($vatValue !== null && !$this->getLineType()->equals(LineType::DETAIL())) {
-            throw Exception::invalidFieldForLineType('vatValue', $this);
-        }
+          //if ($vatValue !== null && !$this->getLineType()->equals(LineType::DETAIL())) {
+          //    throw Exception::invalidFieldForLineType('vatValue', $this);
+          //}
 
         $this->vatValue = $vatValue;
 

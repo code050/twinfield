@@ -78,4 +78,3 @@ trait VatTurnoverFields
         return $this;
     }
 }
-

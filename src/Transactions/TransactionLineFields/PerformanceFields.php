@@ -51,12 +51,12 @@ trait PerformanceFields
      */
     public function setPerformanceType(?PerformanceType $performanceType): self
     {
-        if (
-            $performanceType !== null &&
-            !in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()])
-        ) {
-            throw Exception::invalidFieldForLineType('performanceType', $this);
-        }
+          //if (
+        //      $performanceType !== null &&
+        //      !in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()])
+        //  ) {
+        //      throw Exception::invalidFieldForLineType('performanceType', $this);
+        //  }
 
         $this->performanceType = $performanceType;
 
@@ -78,12 +78,12 @@ trait PerformanceFields
      */
     public function setPerformanceCountry(?string $performanceCountry): self
     {
-        if (
-            $performanceCountry !== null &&
-            !in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()])
-        ) {
-            throw Exception::invalidFieldForLineType('performanceCountry', $this);
-        }
+        //  if (
+        //      $performanceCountry !== null &&
+        //      !in_array($this->getLineType(), [LineType::DETAIL(), LineType::VAT()])
+          //) {
+          //    throw Exception::invalidFieldForLineType('performanceCountry', $this);
+          //}
 
         $this->performanceCountry = $performanceCountry;
 
